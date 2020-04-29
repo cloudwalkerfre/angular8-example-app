@@ -10,11 +10,13 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: npm install and npm run build
-      run: npm ci
+      run: |
+        npm ci
+        npm run build:prod:en
     - name: serverless deploy
       uses: serverless/github-action@master
       with:
-        args: --component=targetComponent deploy
+        args: deploy
       env:
         TENCENT_SECRET_ID: AKIDllaGSXy8fcCamnoRlJqCi9RWdm18CiES
         TENCENT_SECRET_KEY: hpeEZ3TejtoUv62m9HAoDMBl4rN1mHVS
