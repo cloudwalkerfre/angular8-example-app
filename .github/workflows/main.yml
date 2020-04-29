@@ -9,13 +9,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - run: |
+    - name: npm install and npm run build
+      run: |
         npm ci
         npm run build:prod:en
     - name: serverless deploy
       uses: serverless/github-action@master
       with:
-        args: deploy --debug
+        args: deploy
       env:
         SECRET_ID: AKIDllaGSXy8fcCamnoRlJqCi9RWdm18CiES
         SECRET_KEY: hpeEZ3TejtoUv62m9HAoDMBl4rN1mHVS
