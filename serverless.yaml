@@ -2,7 +2,7 @@ MyComponent:
   component: '@serverless/tencent-flask'
   inputs:
     region: ap-shanghai
-    functionName: sentry_test
+    functionName: github-action
     code: ./
     exclude:
       - .gitignore
