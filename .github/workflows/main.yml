@@ -16,5 +16,5 @@ jobs:
       with:
         args: deploy
       env:
-        SECRET_ID: AKIDllaGSXy8fcCamnoRlJqCi9RWdm18CiES
-        SECRET_KEY: hpeEZ3TejtoUv62m9HAoDMBl4rN1mHVS
+        TENCENT_SECRET_ID: AKIDllaGSXy8fcCamnoRlJqCi9RWdm18CiES
+        TENCENT_SECRET_KEY: hpeEZ3TejtoUv62m9HAoDMBl4rN1mHVS
