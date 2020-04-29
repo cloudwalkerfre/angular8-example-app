@@ -4,7 +4,7 @@ website:
   component: '@serverless/tencent-website'
   inputs:
     code:
-      src: ./dict
+      src: ./dist/browser/
       index: index.html
       error: index.html
     region: ap-shanghai
