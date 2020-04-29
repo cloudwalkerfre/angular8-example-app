@@ -4,9 +4,7 @@ website:
   component: '@serverless/tencent-website'
   inputs:
     code:
-      root: ./
       src: ./dict
-      hook: npm run build:prod:en
       index: index.html
       error: index.html
     region: ap-shanghai
