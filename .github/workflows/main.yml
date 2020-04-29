@@ -10,9 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: npm install and npm run build
-      run: |
-        npm ci
-        npm run build:prod:en
+      run: npm ci
     - name: serverless deploy
       uses: serverless/github-action@master
       with:
