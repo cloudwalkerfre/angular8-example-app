@@ -11,7 +11,7 @@ jobs:
     - uses: actions/checkout@master
     - run: |
         npm ci
-        npm run build:ci
+        npm run build:prod:en
     - name: serverless deploy
       uses: serverless/github-action@master
       with:
