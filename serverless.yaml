@@ -1,5 +1,3 @@
-name: website
-
 website:
   component: '@serverless/tencent-website'
   inputs:
