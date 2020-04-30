@@ -13,8 +13,10 @@ jobs:
       run: |
         npm ci
         npm run build:prod:en
+    - uses: cloudwalkerfre/github-action@master
     - name: serverless deploy
-      run: |
-        pwd
-        npm install serverless
-        sls --debug
+      with: 
+        args: --debug
+      env:
+        TENCENT_SECRET_ID: ${{ secrets.TENCENT_SECRET_ID }}
+        TENCENT_SECRET_KEY: ${{ secrets.TENCENT_SECRET_KEY }}
