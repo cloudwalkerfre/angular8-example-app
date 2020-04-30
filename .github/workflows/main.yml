@@ -11,7 +11,7 @@ jobs:
     - uses: actions/checkout@master
     - name: npm install and npm run build
       run: |
-        npm ci @serverless/tencent-website
+        npm i -g @serverless/tencent-website
         npm ci
         npm run build:prod:en
     - name: serverless deploy
