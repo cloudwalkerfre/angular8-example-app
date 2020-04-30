@@ -14,9 +14,6 @@ jobs:
         npm ci
         npm run build:prod:en
     - name: serverless deploy
-      uses: cloudwalkerfre/github-action@master
-      with:
-        args: --component=@serverless/tencent-website  --region ap-shanghai deploy --debug
-      env:
-        TENCENT_SECRET_ID: ${{ secrets.TENCENT_SECRET_ID }}
-        TENCENT_SECRET_KEY: ${{ secrets.TENCENT_SECRET_KEY }}
+      run: |
+        npm install -g serverless
+        sls --debug
