@@ -13,8 +13,8 @@ jobs:
       run: |
         npm ci
         npm run build:prod:en
-    - uses: cloudwalkerfre/github-action@master
     - name: serverless deploy
+      uses: cloudwalkerfre/github-action@master
       with: 
         args: --debug
       env:
