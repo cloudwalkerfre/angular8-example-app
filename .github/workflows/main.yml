@@ -16,7 +16,7 @@ jobs:
     - name: serverless deploy
       uses: cloudwalkerfre/github-action@master
       with:
-        args: --component=website deploy
+        args: --component=@serverless/tencent-website deploy --debug
       env:
         TENCENT_SECRET_ID: ${{ secrets.TENCENT_SECRET_ID }}
         TENCENT_SECRET_KEY: ${{ secrets.TENCENT_SECRET_KEY }}
