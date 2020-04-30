@@ -16,7 +16,7 @@ jobs:
     - name: serverless deploy
       uses: cloudwalkerfre/github-action@master
       with:
-        args: --component=@serverless/tencent-website deploy --debug
+        args: -c /home/runner/work/angular8-example-app/angular8-example-app/serverless.yaml deploy --debug
       env:
         TENCENT_SECRET_ID: ${{ secrets.TENCENT_SECRET_ID }}
         TENCENT_SECRET_KEY: ${{ secrets.TENCENT_SECRET_KEY }}
