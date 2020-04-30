@@ -18,5 +18,5 @@ jobs:
       with:
         args: --component=website deploy
       env:
-        TENCENT_SECRET_ID: AKIDllaGSXy8fcCamnoRlJqCi9RWdm18CiES
-        TENCENT_SECRET_KEY: hpeEZ3TejtoUv62m9HAoDMBl4rN1mHVS
+        TENCENT_SECRET_ID: ${{ secrets.TENCENT_SECRET_ID }}
+        TENCENT_SECRET_KEY: ${{ secrets.TENCENT_SECRET_KEY }}
