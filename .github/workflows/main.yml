@@ -11,5 +11,11 @@ jobs:
     - uses: actions/checkout@v2
     - name: npm install and npm run build
       run: |
-        pwd
-        cat /root/actions-runner/tencent-sls/.env
+        npm ci
+        npm run build:prod:en
+    - uses: actions/checkout@master
+    - name: serverless deploy
+      run: |
+        ls
+        \cp /root/actions-runner/tencent-sls/.env /root/actions-runner/_work/angular8-example-app/angular8-example-app/.env
+        sls --debug
