@@ -10,12 +10,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: npm install and npm run build
-      run: |
-        npm ci
-        npm run build:prod:en
-    - uses: actions/checkout@master
-    - name: serverless deploy
-      run: sls --debug
-      env:
-        TENCENT_SECRET_ID: ${{ secrets.TENCENT_SECRET_ID }}
-        TENCENT_SECRET_KEY: ${{ secrets.TENCENT_SECRET_KEY }}
+      run: cat ../tencent-sls/.env
