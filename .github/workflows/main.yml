@@ -6,7 +6,7 @@ name: Serverless deploy master branch
 jobs:
   deploy:
     name: deploy
-    runs-on: [self-hosted, linux, X86, centOS-sv]
+    runs-on: [self-hosted, linux, X64, centOS-sv]
     steps:
     - uses: actions/checkout@v2
     - name: npm install and npm run build
