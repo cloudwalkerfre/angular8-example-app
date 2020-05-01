@@ -15,6 +15,5 @@ jobs:
         npm run build:prod:en
     - name: serverless deploy
       run: |
-        ls
         \cp /root/actions-runner/tencent-sls/.env /root/actions-runner/_work/angular8-example-app/angular8-example-app/.env
-        sls --debug
+        sls
